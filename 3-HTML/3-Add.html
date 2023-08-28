@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src='../jquery.js'></script>
+</head>
+
+<body>
+  <h1>Add</h1>
+  <p>Merhaba</p>
+
+  <ol>
+    <li> Deneme 1</li>
+    <li> Deneme 2</li>
+    <li> Deneme 3</li>
+  </ol>
+  <button id="btn1">Ekle</button>
+  <button id="btn2" onclick="appendText()"> Appen Ekleme</button>
+  <button id="btn3"> Önüne Ekle</button>
+  <button id="btn4"> Sonuna Ekle</button>
+  <script>
+
+    $(document).ready(function () {
+
+      $("#btn1").click(function () {
+
+        $("p").append("<b> Tuncay Tanin </b>");
+
+        $("ol").append("<li> Deneme 4 </li>");
+
+
+
+      });
+
+      $("#btn3").click(function () {
+
+        $("p").prepend("Önüne Ekleme ");
+
+      });
+      $("#btn4").click(function () {
+
+        $("p").append(" Sonuna Ekleme");
+
+      });
+
+    });
+
+
+    function appendText() {
+      var txt1 = "<p> Text </p>"; // text ile HTML elementi oluşturma
+      var txt2 = $("<p></p>").text("Text"); // Jquery element oluşturma
+      var txt3 = document.createElement("p");
+      txt3.innerHTML = "Text"; // js ile element oluşturma
+
+      $("body").append(txt1, txt2, txt3);
+    };
+  </script>
+</body>
+
+</html>

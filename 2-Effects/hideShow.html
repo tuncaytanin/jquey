@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./jquery.js"></script>
+</head>
+
+<body>
+
+  <h1>Hide and Shows</h1>
+  <button id="show">Show</button>
+  <button id="hide">Hide</button>
+  <button id="hideOrShow">Hide or Show</button>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptate, sunt ad pariatur laborum ipsum
+    architecto mollitia nulla, cum dolore id aliquam deserunt molestias iusto! Dolor beatae quos quas deleniti.</p>
+  <script>
+    $(document).ready(function () {
+      $("#show").on("click", function () {
+        $("p").show("slow");
+      });
+      $("#hide").on("click", function () {
+        $("p").hide(500);
+      });
+
+      $("#hideOrShow").on("click", function () {
+        $("p").toggle("fast");
+      });
+    });
+  </script>
+</body>
+
+</html>

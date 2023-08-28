@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src='../jquery.js'></script>
+</head>
+
+<body class="m-3">
+  <h1>Set</h1>
+  <p id="test1">Lorem ipsum dolor sit amet.</p>
+  <p id="test2">Lorem ipsum dolor sit amet consectetur.</p>
+  <p>İnput field: <input type="text" id="test3" value="Tuncay Tanin"></p>
+  <button id="btn1">Set Text</button>
+  <button id="btn2"> Set Html</button>
+  <button id="btn3"> Set Value</button>
+  <button id="btn4">Set Attribute</button>
+  <script>
+
+    $(document).ready(function () {
+      $("#btn1").on("click", function () {
+        $("#test1").text("Hello world");
+      });
+      $("#btn2").on("click", function () {
+        $("#test2").html(`
+        <b> Hello world!<b>`);
+      });
+      $("#btn3").on("click", function () {
+        $("#test3").val("Rukiye Tanin");
+        $(this).text("Deneme 3").css("color", "white")
+        $(this).css({ "text": "center", "background-color": "red" });
+      });
+      $("#btn4").on("click", function () {
+        $(this).attr({
+          "type": "submit",
+          "title": "denme",
+          "class": "btn btn-primary"
+        });
+      });
+    });
+
+  </script>
+</body>
+
+</html>

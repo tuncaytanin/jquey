@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src='./jquery.js'></script>
+</head>
+
+<body>
+  <h1> Events</h1>
+  <form action="">
+
+    <input type="text">
+    <button> Beni Tıkla </button>
+  </form>
+
+</body>
+<script>
+  $(document).ready(function () {
+
+    /*
+    $("button").click(function () {
+      alert("Tıklandı....");
+    });
+    */
+    /*
+     $("button").dblclick(function () {
+       alert("Çift Tıklandı....");
+     });
+     */
+    /*
+    $("button").mouseenter(function () {
+      $(this).hide();
+    });
+    $("button").mouseleave(function () {
+      $(this).show();
+    });
+    */
+    /*
+        $("input").keypress(function () {
+          console.log("Yazıyor....")
+        });
+        $('input').hover(function () {
+          console.log("Üzerine geldi")
+        })
+    
+      */
+    /*
+   $("form").submit(function () {
+     console.log("Form elementi tetiklendi");
+   })
+   */
+    /*
+      $("input").on("click", function () {
+  
+        console.log("inputa tıklandı");
+      });
+  */
+
+
+
+    $("button").on({
+      mouseenter: function () {
+        console.log("Üzerine geldi");
+      },
+      mouseleave: function () {
+        console.log("Üzerinden ayrıldı");
+      },
+      click: function () {
+        console.log("Üzerine tıklandı");
+      }
+    });
+
+
+
+  });
+</script>
+
+</html>
